@@ -26,7 +26,8 @@ APP.post('/scrap', async (req, res) => {
 
     } catch (e) {
 
-        res.status(404).send({message: "No se pudo encontrar el exámen con los datos introducidos"})
+        res.statusMessage = "Not found results"
+        res.status(460).send({message: "No se pudo encontrar el examen con los datos introducidos"})
 
     }
 })
